@@ -22,6 +22,6 @@ public class MapperClass implements RowMapper<VisitListDTO>{
 		bean.setVisitdate(rs.getString("visitdate"));
 		return bean;
 	}
-	
 
 }
+

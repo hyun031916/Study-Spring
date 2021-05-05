@@ -48,8 +48,5 @@ public class VisitListDTO {
 	}
 	public void setVisitdate(String visitdate) {
 		this.visitdate = visitdate;
-	}
-	
-	
-	
+	}	
 }
