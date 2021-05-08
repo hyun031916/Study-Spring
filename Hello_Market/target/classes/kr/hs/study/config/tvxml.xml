@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                         http://www.springframework.org/schema/beans/spring-beans.xsd
+                         http://www.springframework.org/schema/context
+                         http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 나는 설정파일을 JAVA파일로 만들었으니까 자바 파일 찾아 자바 파일에 등록되어 있는 annotation을 찾아 객체 만들기 -->
+    <context:annotation-config>
+    </context:annotation-config>
+    <bean id="s1" class="kr.hs.study.beans.SamsungTv">
+    <constructor-arg name="price" value="100" index="0"/>
+    <constructor-arg name="speaker" ref="speaker1" index="1"/>
+    </bean>	
+    
+    <bean id="speaker1" class="kr.hs.study.beans.SonySpeaker"/>
+    <bean id="speaker2" class="kr.hs.study.beans.AppleSpeaker"/>
+    
+    <bean id="s2" class="kr.hs.study.beans.LGTv">
+    <property name="price" value="200"/>
+    <property name="speaker" ref="speaker2"/>
+    </bean>
+    
+</beans>
