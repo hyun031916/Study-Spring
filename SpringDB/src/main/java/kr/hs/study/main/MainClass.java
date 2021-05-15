@@ -1,6 +1,7 @@
 package kr.hs.study.main;
 
 import java.util.List;
+import java.util.Scanner;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -16,8 +17,11 @@ public class MainClass {
 //		java로 설정
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(JavaConfig.class);
 	
+		Scanner scan = new Scanner(System.in);
 		LoginDAO loginDAO = ctx.getBean("loginDAO", LoginDAO.class);
 		LoginDTO bean1 = ctx.getBean("loginDTO", LoginDTO.class);
+		
+		
 		bean1.setUserid("kim");
 		bean1.setUserpass(1111);
 

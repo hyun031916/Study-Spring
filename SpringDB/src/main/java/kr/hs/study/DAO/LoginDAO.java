@@ -3,13 +3,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-//db 접속해서 작업
-//JdbcTemplate로 crud
-//멤버 변수로 Autowired
 import org.springframework.stereotype.Component;
 
 import kr.hs.study.dto.LoginDTO;
-
 
 @Component
 public class LoginDAO {
@@ -33,8 +29,6 @@ public class LoginDAO {
 		String sql = "delete from login where userid=?";
 		jdbcTemplate.update(sql, dto.getUserid());
 	}
-	
-	
 	
 	public List<LoginDTO> select_data() {
 		String sql = "select * from login";
