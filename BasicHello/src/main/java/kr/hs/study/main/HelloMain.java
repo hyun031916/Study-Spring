@@ -14,9 +14,14 @@ public class HelloMain {
 		
 		helloInter en=ctx.getBean("hello1",HelloWorldEn.class);
 		en.sayHello();
+		System.out.println(en);
 		
 		helloInter ko=ctx.getBean("hello2",HelloWorldKo.class);
 		ko.sayHello();
+		
+		HelloWorldEn en2 = ctx.getBean("hello1", HelloWorldEn.class);
+		en2.sayHello();
+		System.out.println(en2);
 		
 		ctx.close();
 	}
